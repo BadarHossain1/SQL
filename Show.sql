@@ -1,7 +1,4 @@
 create database college;
-create database IF NOT EXISTS college; 
--- If database doesn't exits then create one to not get error
-
 USE college;
 
 CREATE TABLE student(
@@ -14,6 +11,12 @@ CREATE TABLE student(
 INSERT INTO student VALUES(1,"Badar",26);
 INSERT INTO student VALUES(2,"Sarah",26);
 
-SELECT * FROM student; --SELECT is a DQL command.
+SELECT * FROM student;
+
+SHOW tables;
+--Shows tables
+
+SHOW databases;
+--Shows databases
 
 
