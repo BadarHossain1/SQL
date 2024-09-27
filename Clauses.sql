@@ -81,6 +81,13 @@ SELECT * FROM chatro
 ORDER BY city DESC; -- Order by descending
 
 
+SELECT * FROM chatro
+GROUP BY city; -- Group by city
+
+SELECT city, COUNT(name) FROM chatro
+GROUP BY city; -- Group by city and count
+
+
 
 
 
