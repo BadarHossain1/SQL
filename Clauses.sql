@@ -30,7 +30,7 @@ SELECT * from chatro
  where marks > 80 or city = 'New York'; -- Select all columns from chatro table where marks are greater than 80 or city is New York.
 
 SELECT * from chatro
- where marks > 80 and city = 'New York' or city = 'Chicago'; -- Select all columns from chatro table where marks are greater than 80 and city is New York or Chicago.
+ where marks > 80 and city = 'New York' or city = 'Chicago'; -- Select all columns from chaxtro table where marks are greater than 80 and city is New York or Chicago.
 
 
 SELECT * FROM chatro
@@ -86,6 +86,9 @@ GROUP BY city; -- Group by city
 
 SELECT city, COUNT(name) FROM chatro
 GROUP BY city; -- Group by city and count
+
+SELECT city,name, COUNT(name) FROM chatro
+GROUP BY city; --Error because name is not in GROUP_BY
 
 
 
