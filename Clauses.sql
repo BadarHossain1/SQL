@@ -1,3 +1,16 @@
+-- General Order of writing clauses
+
+SELECT
+FROM
+WHERE
+GROUP BY
+HAVING
+ORDER BY
+
+
+
+
+
 use college;
 
 CREATE TABLE chatrochatro (
@@ -19,6 +32,9 @@ INSERT INTO chatro (rollno, name, marks, grade, city) VALUES
 SELECT name, marks from chatro;
 
 SELECT DISTINCT city FROM chatro;
+
+
+-- WHERE Clause is used to apply conditions to a row.
 
 SELECT * FROM chatro 
 WHERE marks>80; -- Where clause
@@ -65,6 +81,18 @@ SELECT * FROM chatro
 WHERE name LIKE 'A%e%'; -- Select all columns with name starting with A and containing e
 
 
+
+-- HAVING Clause is used to apply conditions to a group
+
+
+SELECT count(name), city FROM chatro
+GROUP BY city; -- Group by city and count
+HAVING max(marks)>90; -- Here lets say in a city a student has 90+ marks, only information about that city will be shown. Basically the best student highlight their city. Cant use WHERE here. 
+-- Select count of names and city from chatro table, group by city and count, and select.
+
+
+
+
 SELECT * FROM chatro
 LIMIT 3; -- Limit up to 3
 
@@ -89,6 +117,9 @@ GROUP BY city; -- Group by city and count
 
 SELECT city,name, COUNT(name) FROM chatro
 GROUP BY city; --Error because name is not in GROUP_BY
+
+
+
 
 
 
