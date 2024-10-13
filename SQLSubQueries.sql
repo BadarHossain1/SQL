@@ -12,4 +12,12 @@
 SELECT column
 FROM table_name
 WHERE col_name operator
-(SubQuery)
+(SubQuery); 
+
+
+SELECT name, rollno 
+FROM student 
+WHERE rollno IN (SELECT rollno
+    FROM student
+    WHERE rollno % 2 = 0
+);
