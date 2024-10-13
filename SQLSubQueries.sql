@@ -21,3 +21,12 @@ WHERE rollno IN (SELECT rollno
     FROM student
     WHERE rollno % 2 = 0
 );
+
+
+
+SELECT MAX(marks)
+FROM (SELECT * FROM student WHERE city = "Delhi") AS temp;
+
+
+SELECT (SELECT MAX(marks) FROM student), name
+FROM student;
